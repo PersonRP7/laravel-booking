@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('resource_booking_statuses', function (Blueprint $table) {
             $table->id();
+            $table->string('confirmation')->nullable();
             $table->timestamps();
         });
     }
