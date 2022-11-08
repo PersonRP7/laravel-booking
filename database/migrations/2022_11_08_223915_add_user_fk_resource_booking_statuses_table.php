@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::table('resource_booking_statuses', function (Blueprint $table) {
             $table->foreignId('user_id')
+            ->nullable()
             ->constrained('users')
-            ->onDelete('cascade')
-            ->nullable();
+            ->onDelete('cascade');
         });
     }
 
