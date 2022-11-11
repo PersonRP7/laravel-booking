@@ -22,6 +22,13 @@ return new class extends Migration
             ->onDelete('cascade');
             // /user foreign key
             
+            // resource
+            $table->foreignId('resource_id')
+            ->nullable()
+            ->constrained('resources')
+            ->onDelete('cascade');
+            // /resource
+
             $table->timestamps();
         });
     }
